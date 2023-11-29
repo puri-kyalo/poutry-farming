@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+     {% load static %}
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+  <!-- Favicons -->
+  <link href="{% static 'static/img/favic.png' %}" rel="icon">
+  <link href="{% static 'static/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'static/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'static/css/style.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="{% static 'static/img/portfolio/gall13.avif' %}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static 'static/img/portfolio/gall18.webp' %}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static 'static/img/portfolio/log1.jpg' %}" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Farm information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Client</strong>: African Company</li>
+                <li><strong>Project date</strong>: 24 Dec, 2023</li>
+                <li><strong>Project URL</strong>: <a href="#">www.jockie.com</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>This is an example of portfolio detail</h2>
+              <p>
+                Stay in touch and you will get all the required information and quality products.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'static/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'static/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'static/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'static/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'static/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'static/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'static/js/main.js' %}"></script>
+
+</body>
+
+</html>

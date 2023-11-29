@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Blog Single</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+     {% load static %}
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+  <!-- Favicons -->
+  <link href="{% static 'static/img/favic.png' %}" rel="icon">
+  <link href="{% static 'static/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'static/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'static/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'static/css/gallery.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="{% url 'index' %}">PoutryFarm</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{% url 'index' %}">Home</a></li>
+
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+               <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'team' %}">Team</a></li>
+              <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+              <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            </ul>
+              <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+             <li><a href="{% url 'products' %}">Products</a></li>
+          <li><a href="{% url 'display' %}">Display</a></li>
+          <li><a href="{% url 'order' %}">Order</a></li>
+            </ul>
+          </li>
+
+            <li class="dropdown"><a href="#"><span>Uploaded Products</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'image' %}">View Images</a></li>
+              <li><a href="{% url 'upload' %}">Upload image</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+             <li class="dropdown"><a href="#"><span>Portfolio</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+            </ul>
+          </li>
+
+          <li><a href="{% url 'pricing' %}">Pricing</a></li>
+
+             <li class="dropdown"><a href="#"><span>Contact Us</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'appointment' %}">Appointment</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'index' %}" class="getstarted">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Blog Single</h2>
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li>Blog Single</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <img src="{% static 'static/img/blog/log2.jpg' %}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="{% url 'blog_single' %}">Embarking on the journey of poultry farming can be a rewarding and fulfilling endeavor, but like any venture, success comes with knowledge, dedication, and careful planning.</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{% url 'blog_single' %}">Ben Kyalo</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{% url 'blog_single' %}"><time datetime="2023-11-24">Nov 11, 2023</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{% url 'blog_single' %}">12 Comments</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>Whether you're considering starting a backyard chicken coop or diving into commercial poultry production, this beginner's guide will provide you with the essential ABCs of successful poultry farm
+                  </p>
+
+                <p>
+                 The foundation of a thriving poultry farm starts with the right birds. Selecting the appropriate poultry breed for your goals is crucial.  </p>
+
+                <blockquote>
+                  <p>
+                   The health and productivity of your birds are directly linked to their diet. Providing a nutritionally balanced feed is paramount.
+                  </p>
+                </blockquote>
+
+                <p>
+                  The health and productivity of your birds are directly linked to their diet. Providing a nutritionally balanced feed is paramount. Work with a poultry nutritionist to formulate feeds suitable for different life stages, and ensure access to clean water. Proper nutrition contributes to robust egg production, optimal growth in meat birds, and overall flock vitality.  </p>
+
+                <h3>Embarking on the journey of poultry farming can be a rewarding and fulfilling endeavor.</h3>
+                <p>
+                  Embarking on the journey of poultry farming can be a rewarding and fulfilling endeavor, but like any venture, success comes with knowledge, dedication, and careful planning. Whether you're considering starting a backyard chicken coop or diving into commercial poultry production, this beginner's guide will provide you with the essential ABCs of successful poultry farming.</p>
+                <img src="{% static 'static/img/blog/log1.jpg' %}" class="img-fluid" alt="">
+
+                <h3>Keeping comprehensive records is not just for accountants</h3>
+                <p>
+                  Keeping comprehensive records is not just for accountants; it's a tool for successful poultry farmers. Track egg production, health records, vaccination schedules, and any notable observations. These records serve as valuable references, aiding in trend analysis and troubleshooting.</p>
+                <p>
+                  Understanding the financial aspects of poultry farming is vital for sustainability. Develop a realistic budget that accounts for feed costs, veterinary care, infrastructure maintenance, and potential market fluctuations.
+                </p>
+
+              </div>
+
+              <div class="entry-footer">
+                <i class="bi bi-folder"></i>
+                <ul class="cats">
+                  <li><a href="#">Business</a></li>
+                </ul>
+
+                <i class="bi bi-tags"></i>
+                <ul class="tags">
+                  <li><a href="#">Farm Maintainance</a></li>
+                  <li><a href="#">Tips</a></li>
+                  <li><a href="#">Marketing</a></li>
+                </ul>
+              </div>
+
+            </article><!-- End blog entry -->
+
+            <div class="blog-author d-flex align-items-center">
+              <img src="{% static 'static/img/blog/pas3.jpg' %}" class="rounded-circle float-left" alt="">
+              <div>
+                <h4>Eudias Mueni</h4>
+                <div class="social-links">
+                  <a href="https://twitters.com/#"><i class="bi bi-twitter"></i></a>
+                  <a href="https://facebook.com/#"><i class="bi bi-facebook"></i></a>
+                  <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
+                </div>
+                <p>
+                 Embarking on the journey of poultry farming can be a rewarding and fulfilling endeavor, but like any venture, success comes with knowledge, dedication, and careful planning. Whether you're considering starting a backyard chicken coop or diving into commercial poultry production, this beginner's guide will provide you with the essential ABCs of successful poultry farming.
+                </p>
+              </div>
+            </div><!-- End blog author bio -->
+
+            <div class="blog-comments">
+
+              <h4 class="comments-count">8 Comments</h4>
+
+              <div id="comment-1" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="{% static 'static/img/blog/pas1.jpg' %}" alt=""></div>
+                  <div>
+                    <h5><a href="">Seth Jatia</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                   <time datetime="2023-11-24">Nov 11, 2023</time>
+                    <p>The foundation of a thriving poultry farm starts with the right birds. Selecting the appropriate poultry breed for your goals is crucial. Different breeds are tailored for various purposes, such as egg production, meat yield, or dual-purpose suitability. Conduct thorough research and consider factors like climate, available space, and local regulations.
+                     </p>
+                  </div>
+                </div>
+              </div><!-- End comment #1 -->
+
+              <div id="comment-2" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="{% static 'static/img/blog/pas2.jpg' %}" alt=""></div>
+                  <div>
+                    <h5><a href="">Nickson Kiprono</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                     <time datetime="2023-11-24">Nov 11, 2023</time>
+                    <p>
+                      Biosecurity is not just a buzzword; it's a cornerstone of poultry farming success. Establishing strict biosecurity measures is essential to prevent the introduction and spread of diseases among your flock
+                    </p>
+                  </div>
+                </div>
+
+                <div id="comment-reply-1" class="comment comment-reply">
+                  <div class="d-flex">
+                    <div class="comment-img"><img src="{% static 'static/img/blog/pas5.jpg' %}" alt=""></div>
+                    <div>
+                      <h5><a href="">Rose Mwende</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                       <time datetime="2023-11-24">Nov 11, 2023</time>
+                      <p>The health and productivity of your birds are directly linked to their diet. Providing a nutritionally balanced feed is paramount. Work with a poultry nutritionist to formulate feeds suitable for different life stages, and ensure access to clean water.
+
+                          Proper nutrition contributes to robust egg production, optimal growth in meat birds, and overall flock vitality.
+                       </p>
+                    </div>
+                  </div>
+
+                  <div id="comment-reply-2" class="comment comment-reply">
+                    <div class="d-flex">
+                      <div class="comment-img"><img src="{% static 'static/img/blog/pass4.jpg' %}" alt=""></div>
+                      <div>
+                        <h5><a href="">Mumbua Kyalo</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                         <time datetime="2023-11-24">Nov 11, 2023</time>
+                        <p>
+                         Disease prevention goes hand-in-hand with biosecurity. Regular veterinary check-ups, routine vaccinations, and proactive disease monitoring are critical components of disease prevention. Swift action in the face of disease threats can save your flock and protect your investment.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div><!-- End comment reply #2-->
+
+                </div><!-- End comment reply #1-->
+
+              </div><!-- End comment #2-->
+
+              <div id="comment-3" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="{% static 'static/img/blog/tes4.jpg' %}" alt=""></div>
+                  <div>
+                    <h5><a href="">Elisha Mwangi</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                     <time datetime="2023-11-24">Nov 11, 2023</time>
+                    <p>
+                      Understanding the financial aspects of poultry farming is vital for sustainability. Develop a realistic budget that accounts for feed costs, veterinary care, infrastructure maintenance, and potential market fluctuations.
+
+                        Regular financial monitoring allows you to make informed decisions and adjust your strategies as needed. </p>
+                  </div>
+                </div>
+
+              </div><!-- End comment #3 -->
+
+              <div id="comment-4" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="{% static 'static/img/blog/tes3.jpg' %}" alt=""></div>
+                  <div>
+                    <h5><a href="">Gerald Gitau</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                     <time datetime="2023-11-24">Nov 11, 2023</time>
+                    <p>Creating a comfortable and efficient living space for your poultry is key. Consider factors like ventilation, lighting, and temperature control.
+
+                        Proper housing minimizes stress, promotes healthy growth, and ensures a conducive environment for laying hens.
+                      </p>
+                  </div>
+                </div>
+
+              </div><!-- End comment #4 -->
+
+              <div class="reply-form">
+                <h4>Leave a Reply</h4>
+                <p>Your email address will not be published. Required fields are marked * </p>
+                 <form method="post" action="/blog_single/" >
+            {% csrf_token %}
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <input name="website" type="text" class="form-control" placeholder="Your Website">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Post Comment</button>
+
+                </form>
+
+              </div>
+
+            </div><!-- End blog comments -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+
+              <h3 class="sidebar-title">Categories</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  <li><a href="#">Services <span>(25)</span></a></li>
+                  <li><a href="#">Products <span>(12)</span></a></li>
+                  <li><a href="#">AboutUs <span>(5)</span></a></li>
+                  <li><a href="#">Contact <span>(22)</span></a></li>
+                  <li><a href="#">Order <span>(8)</span></a></li>
+                  <li><a href="#">Uploaded Products <span>(14)</span></a></li>
+                </ul>
+              </div><!-- End sidebar categories-->
+
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-item recent-posts">
+                <div class="post-item clearfix">
+                  <img src="{% static 'static/img/blog/gal17.avif' %}" alt="" id="a">
+                  <h4><a href="{% url 'blog_single' %}">We ensure our birds are free from deseases</a></h4>
+                       <time datetime="2023-11-24">Nov 11, 2023</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="{% static 'static/img/blog/gall20.avif' %}" alt="" id="b">
+                  <h4><a href="{% url 'blog_single' %}">We offer Quality Products</a></h4>
+                     <time datetime="2023-11-24">Nov 11, 2023</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="{% static 'static/img/blog/gall1.jpg' %}" alt="" id="c">
+                  <h4><a href="{% url 'blog_single' %}">We work towards customers Satisfaction</a></h4>
+                       <time datetime="2023-11-24">Nov 11, 2023</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="{% static 'static/img/blog/gall13.avif' %}" alt="" id="d">
+                  <h4><a href="{% url 'blog_single' %}">Keeps bird housing Clean to help prevent deseases</a></h4>
+                       <time datetime="2023-11-24">Nov 11, 2023</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="{% static 'static/img/blog/gal19.webp' %}" alt="" id="e">
+                  <h4><a href="">Give quality feeds to our birds</a></h4>
+                     <time datetime="2023-11-24">Nov 11, 2023</time>
+                </div>
+
+              </div><!-- End sidebar recent posts-->
+
+              <h3 class="sidebar-title">Tags</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  <li><a href="#">Tuckey</a></li>
+                  <li><a href="#">Duck</a></li>
+                  <li><a href="#">Poutry Feeds</a></li>
+                  <li><a href="#">layers</a></li>
+                  <li><a href="#">Broilers</a></li>
+                  <li><a href="#">House Construction</a></li>
+                  <li><a href="#">Cage Inastaltion</a></li>
+                  <li><a href="#">Chicks</a></li>
+                  <li><a href="#">Customer Satisfaction</a></li>
+                  <li><a href="#">Order & Delivery</a></li>
+                  <li><a href="#">Marketing</a></li>
+                </ul>
+              </div><!-- End sidebar tags-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>PoutryFarm</h3>
+              <p>
+                P.O BOX 36, Mbiuni<br>
+                Machakos, Kenya<br><br>
+                <strong>Phone:</strong> +254 799 994 311<br>
+                <strong>Email:</strong> jockie@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Free Shipping</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Quality Matter</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Customer Satisfaction</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>CatchUp with Us</p>
+            <form action="" method="post">
+                {% csrf_token %}
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>PoutryFarm</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+
+        Designed by <a href="https://jockie.com/">Jockie</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'static/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'static/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'static/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'static/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'static/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'static/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'static/js/main.js' %}"></script>
+
+
+</body>
+
+</html>

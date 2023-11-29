@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Contact</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+     {% load static %}
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+  <!-- Favicons -->
+  <link href="{% static 'static/img/favic.png' %}" rel="icon">
+  <link href="{% static 'static/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'static/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'static/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'static/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'static/css/product.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="{% url 'index' %}">PoutryFarm</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{% url 'index' %}">Home</a></li>
+
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+               <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'team' %}">Team</a></li>
+              <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+              <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            </ul>
+              <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+             <li><a href="{% url 'products' %}">Products</a></li>
+          <li><a href="{% url 'display' %}">Display</a></li>
+          <li><a href="{% url 'order' %}">Order</a></li>
+            </ul>
+          </li>
+
+            <li class="dropdown"><a href="#"><span>Uploaded Products</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'image' %}">View Images</a></li>
+              <li><a href="{% url 'upload' %}">Upload image</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+             <li class="dropdown"><a href="#"><span>Portfolio</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+            </ul>
+          </li>
+
+         <li><a href="{% url 'pricing' %}">Pricing</a></li>
+
+             <li class="dropdown"><a href="#"><span>Contact Us</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'appointment' %}">Appointment</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'index' %}" class="getstarted">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Products</h2>
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li>Products</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+      <!--<section id="Products" class="Products section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2><i>Buy Products</i> </h2>
+
+        </div>
+
+        <form method="post" action="/products/" >
+            {% csrf_token %}
+          <div class="row">
+
+                <div class="col-md-6 form-group" >
+                    <label for="name" class="form-label mb-3" > Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Name" required="required">
+                    <div class="col">
+        {{ form.name }}
+    </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <label for="price" class="form-label mb-3"> Price</label>
+                  <input type="number" class="form-control"  id="price" placeholder="price" required="required">
+                </div>
+<div class="col">
+        {{ form.price }}
+    </div>
+              </div>
+
+             <div>
+                    <label for="description" class="form-label mb-3">Description</label>
+            <textarea class="form-control" name="description" id="description" placeholder="Description (Optional)"></textarea>
+                  {{ form.description }}
+          </div>
+
+            <div class="row">
+                <div  >
+                <label for="product type" class="form-label">Product Type</label>
+              <select name="product type" id="product type" class="form-select">
+                <option value="" disabled selected>Select type</option>
+            <option value="kienyeji">Kienyeji</option>
+            <option value="duck">Duck</option>
+            <option value="layers">Layers</option>
+            <option value="broilers">Broilers</option>
+            <option value="chicks">Chicks</option>
+            <option value="eggs">Eggs</option>
+              </select>
+            </div>
+
+
+
+
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Product bought successfully. Thank you!</div>
+          </div>
+
+            <div class="row mb-3">
+        <div class="col">
+            <button type="submit" class="btn bg-success-subtle">Save</button>
+        </div>
+        <div class="col">
+            <a href="{% url 'display' %}" class="btn bg-success-subtle ">See Product</a>
+        </div>
+         </div>
+</div>
+        </form>
+</div>
+    </section>-->
+
+      <!-- ======= Product Section ======= -->
+
+<section id="Products" class="Products section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2><i>Buy Products</i> </h2>
+
+        </div>
+
+        <form method="post" action="/products/" id="form1" >
+            {% csrf_token %}
+
+
+               <!-- <div class="col-md-6 form-group" >
+                    <label for="name" class="form-label mb-3" > Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Name" required="required">
+                    <div class="col">
+        {{ form.name }}
+    </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <label for="price" class="form-label mb-3"> Price</label>
+                  <input type="number" class="form-control"  id="price" placeholder="price" required="required">
+                </div>
+<div class="col">
+        {{ form.price }}
+    </div>
+              </div>-->
+ <div class="row mb-3" >
+      <div class="col-md-6 form-group">
+   <label for="name" class="form-label">Product Name</label>
+    <input type="text" id="name" name="name" value="{{ product.name }}" class="form-control" placeholder="Product name" required>
+</div>
+ <div class="col-md-6 form-group">
+   <label for="price" class="form-label">Price</label>
+    <input type="number" id="price" name="price" value="{{ product.price }}" class="form-control" placeholder="Price">
+</div>
+</div>
+        <div class="row mb-3" >
+             <div class="col-md-12 form-group">
+<label for="description" class="form-label">Description</label>
+                 <textarea type="text" id="description" name="description" value="{{ product.description }}" class="form-control" placeholder="Give description(optional)"></textarea>
+</div>
+             <div class="row mb-3" >
+                  <div class="col-md-12 form-group">
+    <label for="type" class="form-label">Type</label>
+    <select name="type" id="type" class="form-control">
+        <option selected>{{ product.type }}</option>
+        <option value="kienyeji">Kienyeji</option>
+        <option value="duck">Duck</option>
+        <option value="layers">Layers</option>
+        <option value="broilers">Broilers</option>
+        <option value="chicks">Chicks</option>
+        <option value="eggs">Eggs</option>
+    </select>
+    </div>
+                 </div>
+</div>
+
+    <div class="row mb-3">
+        <div class="col">
+            <button type="submit" class="btn bg-primary-subtle">Save</button>
+        </div>
+        <div class="col">
+            <a href="{% url 'display' %}" class="btn bg-success-subtle">See Product</a>
+
+        </div>
+</div>
+</form>
+</div>
+</section>
+      <!-- end Product Section------>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+ <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>PoutryFarm</h3>
+              <p>
+                P.O BOX 36, Mbiuni<br>
+                Machakos, Kenya<br><br>
+                <strong>Phone:</strong> +254 799 994 311<br>
+                <strong>Email:</strong> jockie@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Free Shipping</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Quality Matter</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Customer Satisfaction</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>CatchUp with Us</p>
+            <form action="" method="post" id="form10">
+                {% csrf_token %}
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>PoutryFarm</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+
+        Designed by <a href="https://jockie.com/">Jockie</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'static/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'static/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'static/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'static/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'static/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'static/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'static/js/main.js' %}"></script>
+
+
+</body>
+
+</html>

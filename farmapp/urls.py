@@ -1,0 +1,35 @@
+
+from django.contrib import admin
+from django.urls import path
+from farmapp import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.register, name='register'),
+    path('login/', views.login, name='login'),
+    path('index/', views.index, name='index'),
+    path('about/', views.about, name='about'),
+    path('team/', views.team, name='team'),
+    path('testimonials/', views.testmonials, name='testimonials'),
+    path('gallery/', views.gallery, name='gallery'),
+    path('services/', views.services, name='services'),
+    path('portfolio/', views.portfolio, name='portfolio'),
+    path('portfoliodetails/', views.portfoliodetails, name='portfolio-details'),
+    path('pricing/', views.pricing, name='pricing'),
+    path('blog/', views.blog, name='blog'),
+    path('blog_single/', views.blog_single, name='blog_single'),
+    path('contact/', views.contact, name='contact'),
+    path('order/', views.order, name='order'),
+    path('products/', views.products, name='products'),
+    path('display/', views.display, name='display'),
+    path('delete/<int:id>', views.delete),
+    path('edit/<int:id>', views.edit),
+    path('update/<int:id>', views.update),
+    path('m_payment/', views.m_payment, name='m_payment'),
+    path('token/', views.token, name='token'),
+    path('stk/', views.stk, name='stk'),
+    path('upload/', views.upload_image, name='upload'),
+    path('image/', views.show_image, name='image'),
+    path('imagedelete/<int:id>', views.imagedelete),
+    path('subscribe/', views.subscribe, name='subscribe'),
+    path('appointment/', views.appointment, name='appointment'),
+]

@@ -32,6 +32,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'static/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'static/css/sub.css' %}" rel="stylesheet">
 
 
 </head>
@@ -118,7 +119,7 @@
           <h2>Please <strong><i>Subscribe</i></strong></h2>
         </div>
 
-        <form method="post" action="{% url 'subscribe' %}" >
+        <form method="post" action="{% url 'subscribe' %}"  id="form7">
             {% csrf_token %}
           <div class="row">
             <div class="col-md-4 form-group">

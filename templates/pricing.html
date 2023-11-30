@@ -31,7 +31,13 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'static/css/style.css' %}" rel="stylesheet">
-
+  <link href="{% static 'static/css/gallery.css' %}" rel="stylesheet">
+    <style>
+        #p1{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
 
 </head>
 
@@ -43,31 +49,20 @@
 
       <h1 class="logo me-auto"><a href="{% url 'index' %}">PoutryFarm</a></h1>
 
-      <nav id="navbar" class="navbar">
+       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="{% url 'index' %}">Home</a></li>
 
           <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="{% url 'about' %}">About</a></li>
+               <li><a href="{% url 'about' %}">About</a></li>
               <li><a href="{% url 'team' %}">Team</a></li>
               <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
               <li><a href="{% url 'gallery' %}">Gallery</a></li>
             </ul>
-              <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-             <li><a href="{% url 'products' %}">Products</a></li>
-          <li><a href="{% url 'display' %}">Display</a></li>
-          <li><a href="{% url 'order' %}">Order</a></li>
-            </ul>
-          </li>
 
-            <li class="dropdown"><a href="#"><span>Uploaded Products</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="{% url 'image' %}">View Images</a></li>
-              <li><a href="{% url 'upload' %}">Upload image</a></li>
-            </ul>
-          </li>
+
+
           <li><a href="{% url 'services' %}">Services</a></li>
              <li class="dropdown"><a href="#"><span>Portfolio</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -75,8 +70,22 @@
                 <li><a href="{% url 'blog' %}">Blog</a></li>
             </ul>
           </li>
+            <li class="dropdown"><a href="#"><span>Uploaded Products</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'image' %}">View Images</a></li>
+              <li><a href="{% url 'upload' %}">Upload image</a></li>
+            </ul>
+          </li>
+ <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                  <li><a href="{% url 'pricing' %}">Pricing</a></li>
+             <li><a href="{% url 'products' %}">Products</a></li>
+          <li><a href="{% url 'display' %}">Display</a></li>
+          <li><a href="{% url 'order' %}">Order</a></li>
 
-          <li><a href="{% url 'pricing' %}">Pricing</a></li>
+            </ul>
+          </li>
+
 
              <li class="dropdown"><a href="#"><span>Contact Us</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -88,7 +97,6 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
     </div>
   </header><!-- End Header -->
 
@@ -111,38 +119,138 @@
 
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
-      <div class="container">
 
-        <div class="row">
-
+<div class="container-fluid">
+        <div class="row g-0">
           <div class="col-lg-3 col-md-6">
+            <div class="box">
+              <h3> Tuckeys</h3>
+              <h4><sup>ksh.</sup>5000<span> / tuckey</span></h4>
+             <!-- <ul>
+                <li>Kienyeji</li>
+                <li>High Breed</li>
+                <li>All Available</li>
+                <li class="na">Kienyeji</li>
+                <li class="na">High Breed</li>
+              </ul> <div class="col-lg-3 col-md-4">-->
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/gall20.avif' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/gall20.avif' %}" alt="" class="img-fluid" id="class7">
+              </a>
+            </div>
+          </div>
+              <div class="btn-wrap">
+                <a href="{% url 'm_payment' %}" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+
+<div class="col-lg-3 col-md-6">
             <div class="box">
               <h3> Eggs</h3>
               <h4><sup>ksh.</sup>500<span> / tray</span></h4>
+             <!-- <ul>
+                <li>Kienyeji</li>
+                <li>High Breed</li>
+                <li>All Available</li>
+                <li class="na">Kienyeji</li>
+                <li class="na">High Breed</li>
+              </ul> <div class="col-lg-3 col-md-4">-->
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/lay1.jpg' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/lay1.jpg' %}" alt="" class="img-fluid" id="class9">
+              </a>
+            </div>
+          </div>
+              <div class="btn-wrap">
+                <a href="{% url 'm_payment' %}" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+            <div class="box">
+              <h3> Chicken</h3>
+              <h4><sup>ksh.</sup>1500<span> / chicken</span></h4>
+             <!-- <ul>
+                <li>Kienyeji</li>
+                <li>High Breed</li>
+                <li>All Available</li>
+                <li class="na">Kienyeji</li>
+                <li class="na">High Breed</li>
+              </ul> <div class="col-lg-3 col-md-4">-->
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/gall12.avif' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/gall12.avif' %}" alt="" class="img-fluid" id="class0">
+              </a>
+            </div>
+          </div>
+              <div class="btn-wrap">
+                <a href="{% url 'm_payment' %}" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+            <div class="box">
+              <h3> Chicks</h3>
+              <h4><sup>ksh.</sup>300<span> / chick</span></h4>
+             <!-- <ul>
+                <li>Kienyeji</li>
+                <li>High Breed</li>
+                <li>All Available</li>
+                <li class="na">Kienyeji</li>
+                <li class="na">High Breed</li>
+              </ul> <div class="col-lg-3 col-md-4">-->
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/gall10.avif' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/gall10.avif' %}" alt="" class="img-fluid" id="class13">
+              </a>
+            </div>
+          </div>
+              <div class="btn-wrap">
+                <a href="{% url 'm_payment' %}" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+
+
+</div>
+
+   <!-- <div class="container-fluid">
+        <div class="row g-0">
+          <div class="col-lg-3 col-md-6">
+            <div class="box">
+              <h3> Eggs</h3>
+              <h4><sup>ksh.</sup>300<span> / chick</span></h4>
               <ul>
                 <li>Kienyeji</li>
                 <li>High Breed</li>
                 <li>All Available</li>
                 <li class="na">Kienyeji</li>
                 <li class="na">High Breed</li>
-              </ul>
+              </ul> <div class="col-lg-3 col-md-4">
+           <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/blog/gall12.avif' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/blog/gall12.avif' %}" alt="" class="img-fluid" id="p1">
+              </a>
+            </div>
+          </div>
               <div class="btn-wrap">
                 <a href="{% url 'm_payment' %}" class="btn-buy">Buy Now</a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-            <div class="box featured">
+         <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+            <div class="box">
               <h3>Cages</h3>
               <h4><sup>Ksh</sup>40000<span> / cage</span></h4>
-              <ul>
-                <li>For 128@ 40000</li>
-                <li>For 500@ 90000</li>
-                <li>For 1000@ 120000</li>
-                <li>Free instalation</li>
-                <li class="na">ContactUs</li>
-              </ul>
+           <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/blog/prising1.jpg' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/blog/prising1.jpg' %}" alt="" class="img-fluid" id="p2">
+              </a>
+            </div>
+          </div>
+
+
               <div class="btn-wrap">
                 <a href="{% url 'm_payment' %}" class="btn-buy">Buy Now</a>
               </div>
@@ -152,7 +260,15 @@
           <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
             <div class="box">
               <h3>Kienyeji</h3>
-              <h4><sup>Ksh.</sup>1700<span> / chickhen</span></h4>
+              <h4><sup>Ksh.</sup>500<span> / tray</span></h4>
+                <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/blog/lay1.jpg' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/blog/lay1.jpg' %}" alt="" class="img-fluid" id="p3">
+              </a>
+            </div>
+          </div>
+
               <ul>
                 <li></li>
                 <li>Kienyeji chicks</li>
@@ -171,25 +287,25 @@
             <div class="box">
               <span class="advanced">Advanced</span>
               <h3>High Breed</h3>
-              <h4><sup>Ksh.</sup>2000<span> / chickhen</span></h4>
-              <ul>
-                <li>Breed eggs</li>
-                <li>Layer</li>
-                <li>Broilers</li>
-                <li>Any product needed</li>
-                <li>All are readily available</li>
-              </ul>
+              <h4><sup>Ksh.</sup>200<span> / chick</span></h4>
+             <div class="col-lg-3 col-md-4">
+           <div class="gallery-item">
+              <a href="{% static  'static/img/blog/gall10.avif' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/blog/gall10.avif' %}" alt="" class="img-fluid" id="p4">
+              </a>
+            </div>
+          </div>
               <div class="btn-wrap">
                 <a href="{% url 'm_payment' %}" class="btn-buy">Buy Now</a>
               </div>
             </div>
-          </div>
+          </div>-->
 
         </div>
 
       </div>
+    </div>
     </section><!-- End Pricing Section -->
-
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq">
       <div class="container">

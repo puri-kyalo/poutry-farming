@@ -32,6 +32,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'static/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'static/css/gallery.css' %}" rel="stylesheet">
 
 
 </head>
@@ -44,20 +45,31 @@
 
       <h1 class="logo me-auto"><a href="{% url 'index' %}">PoutryFarm</a></h1>
 
-       <nav id="navbar" class="navbar">
+      <nav id="navbar" class="navbar">
         <ul>
           <li><a href="{% url 'index' %}">Home</a></li>
 
           <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-               <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'about' %}">About</a></li>
               <li><a href="{% url 'team' %}">Team</a></li>
               <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
               <li><a href="{% url 'gallery' %}">Gallery</a></li>
             </ul>
+              <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+             <li><a href="{% url 'products' %}">Products</a></li>
+          <li><a href="{% url 'display' %}">Display</a></li>
+          <li><a href="{% url 'order' %}">Order</a></li>
+            </ul>
+          </li>
 
-
-
+            <li class="dropdown"><a href="#"><span>Uploaded Products</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'image' %}">View Images</a></li>
+              <li><a href="{% url 'upload' %}">Upload image</a></li>
+            </ul>
+          </li>
           <li><a href="{% url 'services' %}">Services</a></li>
              <li class="dropdown"><a href="#"><span>Portfolio</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -65,22 +77,8 @@
                 <li><a href="{% url 'blog' %}">Blog</a></li>
             </ul>
           </li>
-            <li class="dropdown"><a href="#"><span>Uploaded Products</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="{% url 'image' %}">View Images</a></li>
-              <li><a href="{% url 'upload' %}">Upload image</a></li>
-            </ul>
-          </li>
- <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-                  <li><a href="{% url 'pricing' %}">Pricing</a></li>
-             <li><a href="{% url 'products' %}">Products</a></li>
-          <li><a href="{% url 'display' %}">Display</a></li>
-          <li><a href="{% url 'order' %}">Order</a></li>
 
-            </ul>
-          </li>
-
+         <li><a href="{% url 'pricing' %}">Pricing</a></li>
 
              <li class="dropdown"><a href="#"><span>Contact Us</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -103,37 +101,131 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Show_Image</h2>
+          <h2>Gallery</h2>
           <ol>
             <li><a href="{% url 'index' %}">Home</a></li>
-            <li>Show_Image</li>
+            <li>Gallery</li>
           </ol>
         </div>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <!-- ======= Show image Section ======= -->
-       <h2 class="text-center">Uploaded Images</h2>
+    <!-- ======= Gallery Section ======= -->
+      <section id="gallery" class="gallery">
+      <div class="container">
 
-       <div class="container">
-          <div style="display: flex;
-          justify-content:space-between;
-          flex-wrap: wrap">
-               {% for image in images %}
-              <div class="col mb-2">
-                  <img src="{{ image.image.url }}" alt="Uploaded Image" style="width: 300px;height:300px"> <br>
-                  <p><strong>Title :</strong>{{ image.title }}</p>
-                  <p><strong>Price :</strong>{{ image.price }}</p>
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p>Some of our recent poutry farm images .</p>
+        </div>
+      </div>
 
-                  <a href="/imagedelete/{{ image.id }}" class="btn btn-outline-danger">DELETE</a>
-                  <a href="{% url 'm_payment' %}" class="btn btn-outline-success">PAYMENT</a><br>
-              </div>
-           {% endfor %}
+      <div class="container-fluid">
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/gall12.avif' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/gall12.avif' %}" alt="" class="img-fluid" id="class0">
+              </a>
+            </div>
           </div>
 
-       </div>
-    <!-- End Show image Section -->
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/service7.jpg' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/service7.jpg' %}" alt="" class="img-fluid" id="class2">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/gal19.webp' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/gal19.webp' %}" alt="" class="img-fluid" id="class3">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/log1.jpg' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/log1.jpg' %}" alt="" class="img-fluid" id="class1">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/gall1.jpg' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/gall1.jpg' %}" alt="" class="img-fluid" id="class4">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/gall20.avif' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/gall20.avif' %}" alt="" class="img-fluid" id="class7">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/gall18.webp' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/gall18.webp' %}" alt="" class="img-fluid" id="class8">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/lay1.jpg' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/lay1.jpg' %}" alt="" class="img-fluid" id="class9">
+              </a>
+            </div>
+          </div>
+
+            <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/pt1.jpg' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/pt1.jpg' %}" alt="" class="img-fluid" id="class10">
+              </a>
+            </div>
+          </div>
+
+            <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/lay3.jpg' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/lay3.jpg' %}" alt="" class="img-fluid" id="class11">
+              </a>
+            </div>
+          </div>
+
+            <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/lay2.jpg' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/lay2.jpg' %}" alt="" class="img-fluid" id="class12">
+              </a>
+            </div>
+          </div>
+
+            <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static  'static/img/gallery/gall10.avif' %}" class="galelry-lightbox">
+                <img src="{% static  'static/img/gallery/gall10.avif' %}" alt="" class="img-fluid" id="class13">
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+
+    <!-- End Gallery Section -->
 
   </main><!-- End #main -->
 
@@ -186,8 +278,8 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
-            <p>CatchUp with Us</p>
-            <form method="post" action="{% url 'subscribe' %}" >
+            <p>Catchup with us</p>
+             <form method="post" action="{% url 'subscribe' %}" >
             {% csrf_token %}
                 <input type="email" name="email" class="form-control" id="email" placeholder="Your Email" required><input type="submit" value="Subscribe">
         </form>

@@ -44,7 +44,7 @@
 
       <h1 class="logo me-auto"><a href="{% url 'index' %}">PourtyFarm</a></h1>
 
-      <nav id="navbar" class="navbar">
+       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="{% url 'index' %}">Home</a></li>
 
@@ -55,20 +55,9 @@
               <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
               <li><a href="{% url 'gallery' %}">Gallery</a></li>
             </ul>
-              <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-             <li><a href="{% url 'products' %}">Products</a></li>
-          <li><a href="{% url 'display' %}">Display</a></li>
-          <li><a href="{% url 'order' %}">Order</a></li>
-            </ul>
-          </li>
 
-            <li class="dropdown"><a href="#"><span>Uploaded Products</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="{% url 'image' %}">View Images</a></li>
-              <li><a href="{% url 'upload' %}">Upload image</a></li>
-            </ul>
-          </li>
+
+
           <li><a href="{% url 'services' %}">Services</a></li>
              <li class="dropdown"><a href="#"><span>Portfolio</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -76,8 +65,22 @@
                 <li><a href="{% url 'blog' %}">Blog</a></li>
             </ul>
           </li>
+            <li class="dropdown"><a href="#"><span>Uploaded Products</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'image' %}">View Images</a></li>
+              <li><a href="{% url 'upload' %}">Upload image</a></li>
+            </ul>
+          </li>
+ <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                  <li><a href="{% url 'pricing' %}">Pricing</a></li>
+             <li><a href="{% url 'products' %}">Products</a></li>
+          <li><a href="{% url 'display' %}">Display</a></li>
+          <li><a href="{% url 'order' %}">Order</a></li>
 
-          <li><a href="{% url 'pricing' %}">Pricing</a></li>
+            </ul>
+          </li>
+
 
              <li class="dropdown"><a href="#"><span>Contact Us</span> <i class="bi bi-chevron-down"></i></a>
             <ul>

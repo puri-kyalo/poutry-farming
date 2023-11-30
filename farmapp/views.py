@@ -101,7 +101,7 @@ def products(request):
         form = ProductsForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("/")
+            return redirect("/display")
     else:
         form = ProductsForm()
     return render(request, 'products.html', {'form': form})
